@@ -1,0 +1,30 @@
+<span [style.font-size]='fontSize' [style.color]='fontColor'>{{ msg }}</span>
+<br>
+<input type="text" [(ngModel)]="text" />
+  <p>Hello {{ text }}!</p>
+
+  <hr>
+
+  <h4>name : {{ name + " " + lname}} <br></h4>
+  <h4>name : {{ fullName }} <br></h4>
+  <input type="text" [(ngModel)]="name"> <br>
+  <input type="text" [(ngModel)]="lname"> <br><br>
+ <button (click)='setName()'>setName</button>
+ <button (click)='clear()'>clear</button>
+  <br>
+  <br>
+  num : <span *ngIf="num1 != 0">{{ num1 + num2 }}</span><br>
+  <h5> result : {{ result }} <br></h5>
+  <input type="number" [(ngModel)]="num1"> <br>
+  <input type="number" [(ngModel)]="num2"> <br><br>
+ <button (click)='setNum()'>setName</button>
+ <button (click)='clear()'>clear</button>
+ <br>
+  <br>
+  num : <span *ngIf="num1 != 0">{{ num1 + num2 }}</span><br>
+  <h5> result : {{ sum }} <br></h5>
+  <input type="text" [(ngModel)]="num1"> <br>
+  <input type="text" [(ngModel)]="num2"> <br><br>
+ <button (click)='sumNumber()'>setName</button>
+ <button (click)='clear()'>clear</button>
+

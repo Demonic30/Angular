@@ -1,0 +1,45 @@
+
+<h3>player!</h3>
+<p *ngIf=' player.playerId !== "" else loading'>
+  playerId : {{ player.id }} <br />
+  name : {{ player.name }} <br />
+  birth : {{ player.birth }} <br />
+  highestScore : {{ player.highest_score }} <br />
+  dateTime : {{ player.createdDateTime }} <br />
+</p>
+<ng-template #loading>
+    id is null
+</ng-template>
+
+<hr>
+
+<button (click)='getPlayer()'>Add Player</button>
+
+<table class="table" >
+    <tr >
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birth</th>
+        <th>HighestScore</th>
+        <th>DateTime</th>
+        <th>View</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+  <tbody *ngFor="let ply of playerList1" >
+    <tr *ngIf="ply.id != 1 ">
+        <td> {{ply.id}} </td>
+        <td> {{ply.name}} </td>
+        <td> {{ply.birth}} </td>
+        <td> {{ply.highest_score}} </td>
+        <td> {{ply.createdDateTime}} </td>
+        <td><button (click)='setPlayer(ply)'>view</button></td>
+        <td><a href="http://">edit</a></td>
+        <td><a href="http://">delete</a></td>       
+    </tr>
+</tbody>
+
+</table>
+
+
+
